@@ -149,6 +149,7 @@
     <Compile Include="Areas\Admin\Controllers\DashBoardController.cs" />
     <Compile Include="Areas\Admin\Controllers\RegistrationController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
+    <Compile Include="Areas\Customer\CustomerAreaRegistration.cs" />
     <Compile Include="Common\CommonConstants.cs" />
     <Compile Include="Common\MD5Hash.cs" />
     <Compile Include="Common\UserLogin.cs" />
@@ -1382,6 +1383,7 @@
     <Content Include="Areas\Admin\Assets\fonts\Roboto\Roboto-Regular.woff" />
     <Content Include="Areas\Admin\Assets\fonts\Roboto\Roboto-Regular.woff2" />
     <Content Include="Areas\Admin\Assets\fonts\Roboto\Roboto-Regular_162a16fe.eot" />
+    <Content Include="Areas\Customer\Views\web.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -1413,6 +1415,9 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Base\" />
+    <Folder Include="Areas\Customer\Controllers\" />
+    <Folder Include="Areas\Customer\Models\" />
+    <Folder Include="Areas\Customer\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
