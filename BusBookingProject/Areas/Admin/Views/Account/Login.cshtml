@@ -1,0 +1,61 @@
+﻿@model BusBookingProject.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Areas/Admin/Views/Shared/_SimpleLayout.cshtml";
+}
+@section css{
+    <link href="~/Areas/Admin/Assets/css/myStyle.css" rel="stylesheet" />
+}
+<br />
+<div id="login">
+    <div class="row">
+        <h1 class="text-center">Administrator Login</h1>
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <br />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-3 col-sm-4 col-xs-4" })
+                    <div class="col-md-6">
+                        @Html.TextBoxFor(model => model.Username, htmlAttributes: new { @class = "inputLogin" })
+                        @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-3 col-sm-4 col-xs-4" })
+                    <div class="col-md-6">
+                        @Html.PasswordFor(model => model.Password, htmlAttributes: new { @class = "inputLogin" })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RememberPassword, htmlAttributes: new { @class = "control-label col-md-3 col-sm-4 col-xs-4" })
+                    <div class="col-md-6">
+                        @Html.CheckBoxFor(model => model.RememberPassword, new { @class = "checkboxfor" })
+                        @Html.ValidationMessageFor(model => model.RememberPassword, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-6">
+                        <button class="btnLogin" type="submit">Login</button>
+                    </div>
+                </div>
+                <div id="extra">
+                    <span><a href="#" class="pull-right">Forgot Password?</a></span>
+                    <p>Do not have an account?</p>
+                    <span style="font-size: 1.5em;">@Html.ActionLink("Sign up now!", "Register", "Registration")</span>
+
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
