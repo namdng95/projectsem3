@@ -32,5 +32,18 @@ namespace BusBookingProject.Areas.Admin.Controllers
 
             return Json(result, JsonRequestBehavior.AllowGet);
         }
+
+        [HttpGet]
+        public ActionResult CreateUser()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CreateUser(User user)
+        {
+            var userDAO = new UserDAO();
+            return View();
+
+        }
     }
 }
