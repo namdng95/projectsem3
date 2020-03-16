@@ -1,4 +1,3 @@
-C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\obj\Debug\BusBookingProject.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\BusBookingProject.dll.config
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\BusBookingProject.dll
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\BusBookingProject.pdb
@@ -56,6 +55,8 @@ C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\EntityFrame
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\Newtonsoft.Json.dll
+C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\PagedList.dll
+C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\PagedList.Mvc.dll
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\System.Data.SQLite.dll
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\System.Web.Helpers.dll
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\System.Web.Mvc.dll
@@ -67,6 +68,8 @@ C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\System.Web.
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\WebGrease.dll
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\EntityFramework.xml
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\EntityFramework.SqlServer.xml
+C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\PagedList.xml
+C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\PagedList.Mvc.xml
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\System.Data.SQLite.xml
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\System.Data.SQLite.dll.config
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\System.Web.Helpers.xml
@@ -79,11 +82,7 @@ C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\System.Web.
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\Newtonsoft.Json.xml
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\Antlr3.Runtime.pdb
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\obj\Debug\BusBookingProject.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\obj\Debug\BusBookingProject.csproj.CopyComplete
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\obj\Debug\BusBookingProject.dll
 C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\obj\Debug\BusBookingProject.pdb
-C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\PagedList.dll
-C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\PagedList.Mvc.dll
-C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\PagedList.xml
-C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\bin\PagedList.Mvc.xml
-C:\Users\LENOVO\source\repos\BusBookingProject\BusBookingProject\obj\Debug\BusBookingProject.csprojAssemblyReference.cache

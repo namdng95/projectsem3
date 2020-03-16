@@ -1,4 +1,5 @@
-﻿using BusBookingProject.DAO;
+﻿using BusBookingProject.Areas.Admin.Models;
+using BusBookingProject.DAO;
 using BusBookingProject.Models;
 using System;
 using System.Collections.Generic;
@@ -39,9 +40,39 @@ namespace BusBookingProject.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult CreateUser(User user)
+        public ActionResult CreateUser(UserRegistor model)
         {
-            var userDAO = new UserDAO();
+            if (ModelState.IsValid)
+            {
+                var userDAO = new UserDAO();
+
+                if (userDAO.CheckUsername(model.Username))
+                {
+                    ModelState.AddModelError("", "Tên người dùng đã tồn tại!");
+                }
+                else
+                {
+                    var user = new User();
+                    user.Username = model.Username;
+                    user.Password = Common.MD5Hash.GetMd5Hash(model.Password);
+                    user.CreatedDate = DateTime.Now;
+                    user.ActiveCode = Guid.NewGuid();
+                    user.Role = model.Role;
+                    user.Status = model.Status;
+
+                    var result = userDAO.Insert(user);
+                    if(result > 1)
+                    {
+                        ViewBag.Success = "Đăng ký người dùng thành công!";
+                        model = new UserRegistor();
+                    }
+                    else
+                    {
+                        ViewBag.Error = "Đăng ký tài khoản thất bại!";
+                    }
+                }
+            }
+            ViewBag.Error = "Đăng ký tài khoản thất bại!";
             return View();
 
         }
