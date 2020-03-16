@@ -72,7 +72,6 @@ namespace BusBookingProject.Areas.Admin.Controllers
                     }
                 }
             }
-            ViewBag.Error = "Đăng ký tài khoản thất bại!";
             return View();
 
         }
