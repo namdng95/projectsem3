@@ -1,4 +1,5 @@
 ﻿using BusBookingProject.Areas.Admin.Models;
+using BusBookingProject.Common;
 using BusBookingProject.DAO;
 using BusBookingProject.Models;
 using System;
@@ -13,7 +14,7 @@ namespace BusBookingProject.Areas.Admin.Controllers
     {
         BusTicketManagementEntities db = new BusTicketManagementEntities();
         // GET: Admin/User
-        public ActionResult Index(int page = 1, int pageSize = 10)
+        public ActionResult Index(int page = 1, int pageSize = 3)
         {
             var userDAO = new UserDAO();
             var model = userDAO.ListAllPaging(page, pageSize);
@@ -35,12 +36,12 @@ namespace BusBookingProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public ActionResult CreateUser()
+        public ActionResult Create()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult CreateUser(UserRegistor model)
+        public ActionResult Create(UserRegistor model)
         {
             if (ModelState.IsValid)
             {
@@ -54,7 +55,7 @@ namespace BusBookingProject.Areas.Admin.Controllers
                 {
                     var user = new User();
                     user.Username = model.Username;
-                    user.Password = Common.MD5Hash.GetMd5Hash(model.Password);
+                    user.Password = MD5Hash.GetMd5Hash(model.Password);
                     user.CreatedDate = DateTime.Now;
                     user.ActiveCode = Guid.NewGuid();
                     user.Role = model.Role;
@@ -74,6 +75,50 @@ namespace BusBookingProject.Areas.Admin.Controllers
             }
             return View();
 
+        }
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var model = new UserRegistor();
+            var user = new UserDAO().GetUserById(id);
+            model.ID = user.Id;
+            model.Username = user.Username;
+            model.Password = user.Password;
+            model.Role = user.Role;
+            model.Status = user.Status;
+            
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Edit(UserRegistor model)
+        {
+            if (ModelState.IsValid)
+            {
+                var userDAO = new UserDAO();
+                var user = new User();
+                user.Id = model.ID;
+                user.Username = model.Username;
+                user.Password = model.Password;
+                user.Role = model.Role;
+                user.Status = model.Status;
+
+                if (!String.IsNullOrEmpty(user.Password) && !String.IsNullOrEmpty(user.Username))
+                {
+                    user.Password = MD5Hash.GetMd5Hash(user.Password);
+                }
+                var result = userDAO.Update(user);
+                if (result)
+                {
+                    ViewBag.Success = "Thay đổi thông tin người dùng thành công!";
+                    model = new UserRegistor();
+                }
+                else
+                {
+                    ViewBag.Error = "Thay đổi thông tin người dùng thất bại!";
+                }
+            }
+            return View();
         }
     }
 }

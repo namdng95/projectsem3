@@ -9,7 +9,7 @@ namespace BusBookingProject.Areas.Admin.Models
     public class UserRegistor
     {
         [Key]
-        public long ID { get; set; }
+        public int ID { get; set; }
         [Display(Name = "Tên đăng nhập")]
         [Required(ErrorMessage = "Yêu cầu nhập tên đăng nhập!")]
         public string Username { get; set; }
@@ -25,6 +25,8 @@ namespace BusBookingProject.Areas.Admin.Models
         [Display(Name = "Quyền hạn")]
         [Required(ErrorMessage = "Yêu cầu chọn quyền hạn!")]
         public string Role { get; set; }
-        public bool Status { get; set; }
+        [Display(Name = "Trạng thái")]
+        [Required(ErrorMessage = "Yêu cầu chọn trạng thái!")]
+        public Nullable<bool> Status { get; set; }
     }
 }

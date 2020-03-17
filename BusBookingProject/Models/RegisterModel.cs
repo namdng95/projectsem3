@@ -52,8 +52,5 @@ namespace BusBookingProject.Models
         [Display(Name = "Loại khách hàng")]
         [Required(ErrorMessage = "Yêu cầu chọn loại khách hàng!")]
         public int CategoryCustomerId { get; set; }
-        [Display(Name = "Status")]
-        [Required(ErrorMessage = "Yêu cầu chọn status!")]
-        public bool Status { get; set; }
     }
 }

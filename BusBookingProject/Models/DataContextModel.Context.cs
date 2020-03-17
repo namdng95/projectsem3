@@ -38,6 +38,5 @@ namespace BusBookingProject.Models
         public virtual DbSet<Ve_Xe> Ve_Xe { get; set; }
         public virtual DbSet<Xe> Xes { get; set; }
 
-        public System.Data.Entity.DbSet<BusBookingProject.Areas.Admin.Models.UserRegistor> UserRegistors { get; set; }
     }
 }

@@ -7,7 +7,7 @@
 @section css{
     <link href="~/Areas/Admin/Assets/css/cssAdmin.css" rel="stylesheet" />
 }
-<h1>Thêm mới người dùng</h1>
+<h1>Sửa đổi thông tin người dùng</h1>
 <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
@@ -15,7 +15,7 @@
                 <h4>Nhập thông tin người dùng</h4>
             </div>
             <div class="panel-body">
-                @using (Html.BeginForm("CreateUser", "User", FormMethod.Post))
+                @using (Html.BeginForm("Edit", "User", FormMethod.Post))
                 {
                     @Html.AntiForgeryToken()
 
@@ -75,7 +75,7 @@
                         </div>
                         <br />
                         <div class="form-group btnMargin">
-                            <input class="btnAd" type="submit" value="Thêm" />
+                            <input class="btnAd" type="submit" value="Sửa" />
                         </div>
 
                         <div class="form-group">

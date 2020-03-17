@@ -8,148 +8,13 @@
 }
 @section css{
     <style type="text/css">
-        body {
-            font-family: 'Varela Round', sans-serif;
-        }
-
-        .modal-confirm {
-            color: #636363;
-            width: 400px;
-        }
-
-            .modal-confirm .modal-content {
-                padding: 20px;
-                border-radius: 5px;
-                border: none;
-                text-align: center;
-                font-size: 14px;
-            }
-
-            .modal-confirm .modal-header {
-                border-bottom: none;
-                position: relative;
-                display: block;
-            }
-
-        .modal .modal-dialog .modal-content .modal-header {
-            padding: 0;
-        }
-
-        .modal .modal-dialog .modal-content .modal-body {
-            padding: 0;
-        }
-
-        .modal-confirm h4 {
-            text-align: center;
-            font-size: 26px;
-            margin: 0 auto;
-        }
-
-        .modal-confirm .close {
-            position: absolute;
-            top: -5px;
-            right: -2px;
-        }
-
-        .modal-confirm .modal-body {
-            color: #999;
-        }
-
-        .modal-confirm .modal-footer {
-            border: none;
-            text-align: center;
-            border-radius: 5px;
-            font-size: 13px;
-            padding: 10px 15px 25px;
-        }
-
-            .modal-confirm .modal-footer a {
-                color: #999;
-            }
-
-        .modal-confirm .icon-box {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto;
-            border-radius: 50%;
-            z-index: 9;
-            text-align: center;
-            border: 3px solid #f15e5e;
-        }
-        .modal-confirm .icon-box-done {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto;
-            border-radius: 50%;
-            z-index: 9;
-            text-align: center;
-            border: 3px solid limegreen;
-        }
-
-        .modal-confirm .icon-box i {
-                color: #f15e5e;
-                font-size: 46px;
-                display: inline-block;
-                margin-top: 13px;
-         }   
-        .modal-confirm .icon-box-done i {
-                color: limegreen;
-                font-size: 46px;
-                display: inline-block;
-                margin-top: 13px;
-         }  
-
-
-        .modal-confirm .btn {
-            color: #fff;
-            border-radius: 4px;
-            background: #60c7c1;
-            text-decoration: none;
-            transition: all 0.4s;
-            line-height: normal;
-            min-width: 120px;
-            border: none;
-            min-height: 40px;
-            border-radius: 3px;
-            margin: 0 5px;
-            outline: none !important;
-        }
-
-        .modal-confirm .btn-info {
-            background: #c1c1c1;
-        }
-
-            .modal-confirm .btn-info:hover, .modal-confirm .btn-info:focus {
-                background: #a8a8a8;
-            }
-
-        .modal-confirm .btn-danger {
-            background: #f15e5e;
-        }
-
-            .modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
-                background: #ee3535;
-            }
-
-        .trigger-btn {
-            display: inline-block;
-            margin: 100px auto;
-        }
-
-        .btn-info, .btn-primary, .btn-primary:hover, .btn-info:hover {
-            box-shadow: none;
-        }
-        .btn-primary:hover{
-            background-color: limegreen;
-        }
-
-        #loaderDiv {
-        }
+        
     </style>
+    <link href="~/Areas/Admin/Assets/css/cssAdmin.css" rel="stylesheet" />
 }
 <h2>Danh sách người dùng</h2>
 <span style="margin: 10px 0;">
-    @Html.ActionLink("Add new User", "CreateUser", "User")
+    @Html.ActionLink("Add new User", "Create", "User")
 </span>
 <table class="table table-bordered">
     <tr class="thead-dark">
@@ -262,42 +127,5 @@
     </div>
 </div>
 @section js{
-    <script>
-        $(document).ready(function () {
-            //$('.ConfirmDelete').off('click').on('click'), function (e) {
-            //    e.preventDefault();
-
-            //}
-        });
-        //Show popup Delete and get UserId
-        function ConfirmDelete(Id) {
-            $("#hiddenUserId").val(Id);
-            $("#myModal").modal('show');
-        }
-        //Call ajax and Delete User
-        function DeleteUser() {
-            $('#loaderDiv').show();
-
-            var userId = $('#hiddenUserId').val();
-
-            $.ajax({
-                url: "/Admin/User/DeleteUser",
-                type: "POST",
-                dataType: "json",
-                data: {
-                    Id: userId
-                },
-                success: function (result) {
-                    if (result) {
-                        $('#loaderDiv').hide();
-                        $('#myModal').modal('hide');
-                        $('#row_' + userId).remove();
-                        $('#myModal_1').modal('show');
-                    } else {
-                        $('#myModal_2').modal('show');
-                    }
-                }
-            })
-        }
-    </script>
+    <script src="~/Areas/Admin/Assets/js/myJs.js"></script>
 }

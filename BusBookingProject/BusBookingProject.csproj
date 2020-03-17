@@ -258,6 +258,7 @@
     <Content Include="Areas\Admin\Assets\images\logo.svg" />
     <Content Include="Areas\Admin\Assets\js\dashboard.js" />
     <Content Include="Areas\Admin\Assets\js\hoverable-collapse.js" />
+    <Content Include="Areas\Admin\Assets\js\myJs.js" />
     <Content Include="Areas\Admin\Assets\js\off-canvas.js" />
     <Content Include="Areas\Admin\Assets\js\settings.js" />
     <Content Include="Areas\Admin\Assets\js\template.js" />
@@ -1386,7 +1387,8 @@
     <Content Include="Areas\Admin\Assets\fonts\Roboto\Roboto-Regular.woff2" />
     <Content Include="Areas\Admin\Assets\fonts\Roboto\Roboto-Regular_162a16fe.eot" />
     <Content Include="Areas\Customer\Views\web.config" />
-    <Content Include="Areas\Admin\Views\User\CreateUser.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Edit.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
