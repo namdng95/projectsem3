@@ -161,57 +161,57 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Chitietdatve.cs">
-      <DependentUpon>DataContextModel.tt</DependentUpon>
+      <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Chuyen_Xe.cs">
-      <DependentUpon>DataContextModel.tt</DependentUpon>
+      <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DataContextModel.Context.cs">
+    <Compile Include="Models\DataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataContextModel.Context.tt</DependentUpon>
+      <DependentUpon>DataModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DataContextModel.cs">
+    <Compile Include="Models\DataModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataContextModel.tt</DependentUpon>
+      <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DataContextModel.Designer.cs">
+    <Compile Include="Models\DataModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataContextModel.edmx</DependentUpon>
+      <DependentUpon>DataModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Khach_Hang.cs">
-      <DependentUpon>DataContextModel.tt</DependentUpon>
+      <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Loai_KhachHang.cs">
-      <DependentUpon>DataContextModel.tt</DependentUpon>
+      <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Loai_NV.cs">
-      <DependentUpon>DataContextModel.tt</DependentUpon>
+      <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Loai_Xe.cs">
-      <DependentUpon>DataContextModel.tt</DependentUpon>
+      <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\Nhan_Vien.cs">
-      <DependentUpon>DataContextModel.tt</DependentUpon>
+      <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\Tai_Xe.cs">
-      <DependentUpon>DataContextModel.tt</DependentUpon>
+      <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Tuyen_Xe.cs">
-      <DependentUpon>DataContextModel.tt</DependentUpon>
+      <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs">
-      <DependentUpon>DataContextModel.tt</DependentUpon>
+      <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Ve_Xe.cs">
-      <DependentUpon>DataContextModel.tt</DependentUpon>
+      <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Xe.cs">
-      <DependentUpon>DataContextModel.tt</DependentUpon>
+      <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1182,25 +1182,18 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\DataContextModel.Context.tt">
+    <Content Include="Models\DataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DataContextModel.Context.cs</LastGenOutput>
-      <DependentUpon>DataContextModel.edmx</DependentUpon>
+      <DependentUpon>DataModel.edmx</DependentUpon>
+      <LastGenOutput>DataModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\DataContextModel.tt">
+    <Content Include="Models\DataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DataContextModel.edmx</DependentUpon>
-      <LastGenOutput>DataContextModel.cs</LastGenOutput>
+      <DependentUpon>DataModel.edmx</DependentUpon>
+      <LastGenOutput>DataModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\DataContextModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DataContextModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\DataContextModel.edmx.diagram">
-      <DependentUpon>DataContextModel.edmx</DependentUpon>
-    </Content>
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="Areas\Admin\Assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
@@ -1389,6 +1382,13 @@
     <Content Include="Areas\Customer\Views\web.config" />
     <Content Include="Areas\Admin\Views\User\Create.cshtml" />
     <Content Include="Areas\Admin\Views\User\Edit.cshtml" />
+    <EntityDeploy Include="Models\DataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DataModel.edmx.diagram">
+      <DependentUpon>DataModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -1415,6 +1415,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_OperaterLayout.cshtml" />
+    <Content Include="Views\Shared\_LayoutHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

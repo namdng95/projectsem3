@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f2ab0aaf384141fab726befb1ecb4875" Name="Diagram1">
+      <Diagram DiagramId="6b936f5421134c8d9203debf25d9f261" Name="Diagram1">
         <EntityTypeShape EntityType="BusTicketManagementModel.Chitietdatve" Width="1.5" PointX="9.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BusTicketManagementModel.Chuyen_Xe" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusTicketManagementModel.Chuyen_Xe" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="BusTicketManagementModel.Khach_Hang" Width="1.5" PointX="7.5" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="BusTicketManagementModel.Loai_KhachHang" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
         <EntityTypeShape EntityType="BusTicketManagementModel.Loai_NV" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
@@ -17,17 +17,17 @@
         <EntityTypeShape EntityType="BusTicketManagementModel.User" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BusTicketManagementModel.Ve_Xe" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="BusTicketManagementModel.Xe" Width="1.5" PointX="5.25" PointY="13.625" IsExpanded="true" />
-        <AssociationConnector Association="BusTicketManagementModel.FK__Chitietdat__MaKH__540C7B00" ManuallyRouted="false" />
-        <AssociationConnector Association="BusTicketManagementModel.FK__Chitietdat__MaVe__55009F39" ManuallyRouted="false" />
-        <AssociationConnector Association="BusTicketManagementModel.FK__Chuyen_Xe__MaNV__4B7734FF" ManuallyRouted="false" />
-        <AssociationConnector Association="BusTicketManagementModel.FK__Chuyen_Xe__MaTai__4C6B5938" ManuallyRouted="false" />
-        <AssociationConnector Association="BusTicketManagementModel.FK__Chuyen_Xe__MaTuy__4A8310C6" ManuallyRouted="false" />
-        <AssociationConnector Association="BusTicketManagementModel.FK__Ve_Xe__MaChuyenX__503BEA1C" ManuallyRouted="false" />
-        <AssociationConnector Association="BusTicketManagementModel.FK__Khach_Han__MaLoa__40058253" ManuallyRouted="false" />
-        <AssociationConnector Association="BusTicketManagementModel.FK__Nhan_Vien__MaLoa__43D61337" ManuallyRouted="false" />
-        <AssociationConnector Association="BusTicketManagementModel.FK__Xe__MaLoaiXe__47A6A41B" ManuallyRouted="false" />
-        <AssociationConnector Association="BusTicketManagementModel.FK__Ve_Xe__MaNV__4F47C5E3" ManuallyRouted="false" />
-        <AssociationConnector Association="BusTicketManagementModel.FK__Ve_Xe__MaXe__51300E55" ManuallyRouted="false" />
+        <AssociationConnector Association="BusTicketManagementModel.FK__Chitietdat__MaKH__03BB8E22" ManuallyRouted="false" />
+        <AssociationConnector Association="BusTicketManagementModel.FK__Chitietdat__MaVe__04AFB25B" ManuallyRouted="false" />
+        <AssociationConnector Association="BusTicketManagementModel.FK__Chuyen_Xe__MaNV__7B264821" ManuallyRouted="false" />
+        <AssociationConnector Association="BusTicketManagementModel.FK__Chuyen_Xe__MaTai__7C1A6C5A" ManuallyRouted="false" />
+        <AssociationConnector Association="BusTicketManagementModel.FK__Chuyen_Xe__MaTuy__7A3223E8" ManuallyRouted="false" />
+        <AssociationConnector Association="BusTicketManagementModel.FK__Ve_Xe__MaChuyenX__7FEAFD3E" ManuallyRouted="false" />
+        <AssociationConnector Association="BusTicketManagementModel.FK__Khach_Han__MaLoa__6FB49575" ManuallyRouted="false" />
+        <AssociationConnector Association="BusTicketManagementModel.FK__Nhan_Vien__MaLoa__73852659" ManuallyRouted="false" />
+        <AssociationConnector Association="BusTicketManagementModel.FK__Xe__MaLoaiXe__7755B73D" ManuallyRouted="false" />
+        <AssociationConnector Association="BusTicketManagementModel.FK__Ve_Xe__MaNV__7EF6D905" ManuallyRouted="false" />
+        <AssociationConnector Association="BusTicketManagementModel.FK__Ve_Xe__MaXe__00DF2177" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BusTicketManagementModelStoreContainer" CdmEntityContainer="BusTicketManagementEntities">
+    <EntitySetMapping Name="Chitietdatves">
+      <EntityTypeMapping TypeName="BusTicketManagementModel.Chitietdatve">
+        <MappingFragment StoreEntitySet="Chitietdatve">
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+          <ScalarProperty Name="MaVe" ColumnName="MaVe" />
+          <ScalarProperty Name="PhuongThucThanhToan" ColumnName="PhuongThucThanhToan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chuyen_Xe">
+      <EntityTypeMapping TypeName="BusTicketManagementModel.Chuyen_Xe">
+        <MappingFragment StoreEntitySet="Chuyen_Xe">
+          <ScalarProperty Name="MaChuyenXe" ColumnName="MaChuyenXe" />
+          <ScalarProperty Name="TenChuyenXe" ColumnName="TenChuyenXe" />
+          <ScalarProperty Name="MaTuyen" ColumnName="MaTuyen" />
+          <ScalarProperty Name="GioDi" ColumnName="GioDi" />
+          <ScalarProperty Name="GioDen" ColumnName="GioDen" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="ChoTrong" ColumnName="ChoTrong" />
+          <ScalarProperty Name="MaTaiXe" ColumnName="MaTaiXe" />
+          <ScalarProperty Name="UrlImage" ColumnName="UrlImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Khach_Hang">
+      <EntityTypeMapping TypeName="BusTicketManagementModel.Khach_Hang">
+        <MappingFragment StoreEntitySet="Khach_Hang">
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="MaLoaiKH" ColumnName="MaLoaiKH" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IdLogin" ColumnName="IdLogin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loai_KhachHang">
+      <EntityTypeMapping TypeName="BusTicketManagementModel.Loai_KhachHang">
+        <MappingFragment StoreEntitySet="Loai_KhachHang">
+          <ScalarProperty Name="MaLoaiKH" ColumnName="MaLoaiKH" />
+          <ScalarProperty Name="TenLoaiKH" ColumnName="TenLoaiKH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loai_NV">
+      <EntityTypeMapping TypeName="BusTicketManagementModel.Loai_NV">
+        <MappingFragment StoreEntitySet="Loai_NV">
+          <ScalarProperty Name="MaLoaiNV" ColumnName="MaLoaiNV" />
+          <ScalarProperty Name="TenLoaiNV" ColumnName="TenLoaiNV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loai_Xe">
+      <EntityTypeMapping TypeName="BusTicketManagementModel.Loai_Xe">
+        <MappingFragment StoreEntitySet="Loai_Xe">
+          <ScalarProperty Name="MaLoaiXe" ColumnName="MaLoaiXe" />
+          <ScalarProperty Name="TenLoaiXe" ColumnName="TenLoaiXe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nhan_Vien">
+      <EntityTypeMapping TypeName="BusTicketManagementModel.Nhan_Vien">
+        <MappingFragment StoreEntitySet="Nhan_Vien">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+          <ScalarProperty Name="MaLoaiNV" ColumnName="MaLoaiNV" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tai_Xe">
+      <EntityTypeMapping TypeName="BusTicketManagementModel.Tai_Xe">
+        <MappingFragment StoreEntitySet="Tai_Xe">
+          <ScalarProperty Name="MaTaiXe" ColumnName="MaTaiXe" />
+          <ScalarProperty Name="TenTaiXe" ColumnName="TenTaiXe" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="Ngaysinh" ColumnName="Ngaysinh" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tuyen_Xe">
+      <EntityTypeMapping TypeName="BusTicketManagementModel.Tuyen_Xe">
+        <MappingFragment StoreEntitySet="Tuyen_Xe">
+          <ScalarProperty Name="MaTuyen" ColumnName="MaTuyen" />
+          <ScalarProperty Name="TenTuyen" ColumnName="TenTuyen" />
+          <ScalarProperty Name="DiemDi" ColumnName="DiemDi" />
+          <ScalarProperty Name="DiemDen" ColumnName="DiemDen" />
+          <ScalarProperty Name="BangGia" ColumnName="BangGia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BusTicketManagementModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="ActiveCode" ColumnName="ActiveCode" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ve_Xe">
+      <EntityTypeMapping TypeName="BusTicketManagementModel.Ve_Xe">
+        <MappingFragment StoreEntitySet="Ve_Xe">
+          <ScalarProperty Name="MaVe" ColumnName="MaVe" />
+          <ScalarProperty Name="TenVe" ColumnName="TenVe" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="MaChuyenXe" ColumnName="MaChuyenXe" />
+          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
+          <ScalarProperty Name="ViTriGheNgoi" ColumnName="ViTriGheNgoi" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Xes">
+      <EntityTypeMapping TypeName="BusTicketManagementModel.Xe">
+        <MappingFragment StoreEntitySet="Xe">
+          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
+          <ScalarProperty Name="TenXe" ColumnName="TenXe" />
+          <ScalarProperty Name="BienSoXe" ColumnName="BienSoXe" />
+          <ScalarProperty Name="MaLoaiXe" ColumnName="MaLoaiXe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

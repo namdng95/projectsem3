@@ -22,8 +22,7 @@ namespace BusBookingProject.Models
     
         public int MaXe { get; set; }
         public string TenXe { get; set; }
-        public string BienSoXe { get; set; }
-        public string SoGhe { get; set; }
+        public int BienSoXe { get; set; }
         public Nullable<int> MaLoaiXe { get; set; }
     
         public virtual Loai_Xe Loai_Xe { get; set; }

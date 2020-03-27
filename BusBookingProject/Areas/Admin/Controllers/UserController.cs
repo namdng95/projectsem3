@@ -22,7 +22,36 @@ namespace BusBookingProject.Areas.Admin.Controllers
             //ViewBag.ListUser = listUser;
             return View(model);
         }
-        
+        public JsonResult SearchingData(string SearchBy, string SearchValue)
+        {
+            List<User> listUser = new List<User>();
+            if (SearchBy == "Id")
+            {
+                try
+                {
+                    if(!String.IsNullOrEmpty(SearchValue))
+                    {
+                        int Id = Convert.ToInt32(SearchValue);
+                        listUser = db.Users.Where(x => x.Id == Id).ToList();
+                    }
+                    else
+                    {
+                        listUser = db.Users.ToList();
+                    }                 
+                }
+                catch(FormatException e)
+                {
+                    ViewBag.Exception = "Wrong Id!"+e.ToString();
+                }
+                return Json(listUser, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                listUser = db.Users.Where(x => x.Username.Contains(SearchValue) || SearchValue == null).ToList();
+
+                return Json(listUser, JsonRequestBehavior.AllowGet);
+            }
+        }
         public JsonResult DeleteUser(int Id)
         {
             bool result = false;

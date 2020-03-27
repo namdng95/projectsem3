@@ -37,6 +37,5 @@ namespace BusBookingProject.Models
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Ve_Xe> Ve_Xe { get; set; }
         public virtual DbSet<Xe> Xes { get; set; }
-
     }
 }

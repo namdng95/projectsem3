@@ -1,9 +1,4 @@
-﻿$(document).ready(function () {
-    //$('.ConfirmDelete').off('click').on('click'), function (e) {
-    //    e.preventDefault();
-
-    //}
-});
+﻿
 //Show popup Delete and get UserId
 function ConfirmDelete(Id) {
     $("#hiddenUserId").val(Id);

@@ -23,11 +23,12 @@ namespace BusBookingProject.Models
         public int MaChuyenXe { get; set; }
         public string TenChuyenXe { get; set; }
         public Nullable<int> MaTuyen { get; set; }
-        public string GioDi { get; set; }
-        public string GioDen { get; set; }
+        public Nullable<System.DateTime> GioDi { get; set; }
+        public Nullable<System.DateTime> GioDen { get; set; }
         public Nullable<int> MaNV { get; set; }
         public Nullable<int> ChoTrong { get; set; }
         public Nullable<int> MaTaiXe { get; set; }
+        public string UrlImage { get; set; }
     
         public virtual Nhan_Vien Nhan_Vien { get; set; }
         public virtual Tai_Xe Tai_Xe { get; set; }

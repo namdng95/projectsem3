@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BusTicketManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Chitietdatve">
+    <Key>
+      <PropertyRef Name="MaKH" />
+      <PropertyRef Name="MaVe" />
+    </Key>
+    <Property Name="MaKH" Type="int" Nullable="false" />
+    <Property Name="MaVe" Type="int" Nullable="false" />
+    <Property Name="PhuongThucThanhToan" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Chuyen_Xe">
+    <Key>
+      <PropertyRef Name="MaChuyenXe" />
+    </Key>
+    <Property Name="MaChuyenXe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenChuyenXe" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="MaTuyen" Type="int" />
+    <Property Name="GioDi" Type="datetime" />
+    <Property Name="GioDen" Type="datetime" />
+    <Property Name="MaNV" Type="int" />
+    <Property Name="ChoTrong" Type="int" />
+    <Property Name="MaTaiXe" Type="int" />
+    <Property Name="UrlImage" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Khach_Hang">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenKH" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="MaLoaiKH" Type="int" />
+    <Property Name="NgaySinh" Type="datetime" Nullable="false" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CMND" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DienThoai" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="IdLogin" Type="int" />
+  </EntityType>
+  <EntityType Name="Loai_KhachHang">
+    <Key>
+      <PropertyRef Name="MaLoaiKH" />
+    </Key>
+    <Property Name="MaLoaiKH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenLoaiKH" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Loai_NV">
+    <Key>
+      <PropertyRef Name="MaLoaiNV" />
+    </Key>
+    <Property Name="MaLoaiNV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenLoaiNV" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Loai_Xe">
+    <Key>
+      <PropertyRef Name="MaLoaiXe" />
+    </Key>
+    <Property Name="MaLoaiXe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenLoaiXe" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nhan_Vien">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenNV" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="MaLoaiNV" Type="int" />
+    <Property Name="NgaySinh" Type="datetime" Nullable="false" />
+    <Property Name="GioiTinh" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CMND" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DienThoai" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tai_Xe">
+    <Key>
+      <PropertyRef Name="MaTaiXe" />
+    </Key>
+    <Property Name="MaTaiXe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTaiXe" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Ngaysinh" Type="datetime" Nullable="false" />
+    <Property Name="CMND" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DienThoai" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tuyen_Xe">
+    <Key>
+      <PropertyRef Name="MaTuyen" />
+    </Key>
+    <Property Name="MaTuyen" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTuyen" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="DiemDi" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="DiemDen" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="BangGia" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Role" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ActiveCode" Type="uniqueidentifier" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="Ve_Xe">
+    <Key>
+      <PropertyRef Name="MaVe" />
+    </Key>
+    <Property Name="MaVe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenVe" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MaNV" Type="int" />
+    <Property Name="MaChuyenXe" Type="int" />
+    <Property Name="MaXe" Type="int" />
+    <Property Name="ViTriGheNgoi" Type="nvarchar" MaxLength="255" />
+    <Property Name="GhiChu" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Xe">
+    <Key>
+      <PropertyRef Name="MaXe" />
+    </Key>
+    <Property Name="MaXe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenXe" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="BienSoXe" Type="int" Nullable="false" />
+    <Property Name="MaLoaiXe" Type="int" />
+  </EntityType>
+  <Association Name="FK__Chitietdat__MaKH__03BB8E22">
+    <End Role="Khach_Hang" Type="Self.Khach_Hang" Multiplicity="1" />
+    <End Role="Chitietdatve" Type="Self.Chitietdatve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Khach_Hang">
+        <PropertyRef Name="MaKH" />
+      </Principal>
+      <Dependent Role="Chitietdatve">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chitietdat__MaVe__04AFB25B">
+    <End Role="Ve_Xe" Type="Self.Ve_Xe" Multiplicity="1" />
+    <End Role="Chitietdatve" Type="Self.Chitietdatve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ve_Xe">
+        <PropertyRef Name="MaVe" />
+      </Principal>
+      <Dependent Role="Chitietdatve">
+        <PropertyRef Name="MaVe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chuyen_Xe__MaNV__7B264821">
+    <End Role="Nhan_Vien" Type="Self.Nhan_Vien" Multiplicity="0..1" />
+    <End Role="Chuyen_Xe" Type="Self.Chuyen_Xe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nhan_Vien">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="Chuyen_Xe">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chuyen_Xe__MaTai__7C1A6C5A">
+    <End Role="Tai_Xe" Type="Self.Tai_Xe" Multiplicity="0..1" />
+    <End Role="Chuyen_Xe" Type="Self.Chuyen_Xe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tai_Xe">
+        <PropertyRef Name="MaTaiXe" />
+      </Principal>
+      <Dependent Role="Chuyen_Xe">
+        <PropertyRef Name="MaTaiXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chuyen_Xe__MaTuy__7A3223E8">
+    <End Role="Tuyen_Xe" Type="Self.Tuyen_Xe" Multiplicity="0..1" />
+    <End Role="Chuyen_Xe" Type="Self.Chuyen_Xe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tuyen_Xe">
+        <PropertyRef Name="MaTuyen" />
+      </Principal>
+      <Dependent Role="Chuyen_Xe">
+        <PropertyRef Name="MaTuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Khach_Han__MaLoa__6FB49575">
+    <End Role="Loai_KhachHang" Type="Self.Loai_KhachHang" Multiplicity="0..1" />
+    <End Role="Khach_Hang" Type="Self.Khach_Hang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loai_KhachHang">
+        <PropertyRef Name="MaLoaiKH" />
+      </Principal>
+      <Dependent Role="Khach_Hang">
+        <PropertyRef Name="MaLoaiKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Nhan_Vien__MaLoa__73852659">
+    <End Role="Loai_NV" Type="Self.Loai_NV" Multiplicity="0..1" />
+    <End Role="Nhan_Vien" Type="Self.Nhan_Vien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loai_NV">
+        <PropertyRef Name="MaLoaiNV" />
+      </Principal>
+      <Dependent Role="Nhan_Vien">
+        <PropertyRef Name="MaLoaiNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ve_Xe__MaChuyenX__7FEAFD3E">
+    <End Role="Chuyen_Xe" Type="Self.Chuyen_Xe" Multiplicity="0..1" />
+    <End Role="Ve_Xe" Type="Self.Ve_Xe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chuyen_Xe">
+        <PropertyRef Name="MaChuyenXe" />
+      </Principal>
+      <Dependent Role="Ve_Xe">
+        <PropertyRef Name="MaChuyenXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ve_Xe__MaNV__7EF6D905">
+    <End Role="Nhan_Vien" Type="Self.Nhan_Vien" Multiplicity="0..1" />
+    <End Role="Ve_Xe" Type="Self.Ve_Xe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nhan_Vien">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="Ve_Xe">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ve_Xe__MaXe__00DF2177">
+    <End Role="Xe" Type="Self.Xe" Multiplicity="0..1" />
+    <End Role="Ve_Xe" Type="Self.Ve_Xe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Xe">
+        <PropertyRef Name="MaXe" />
+      </Principal>
+      <Dependent Role="Ve_Xe">
+        <PropertyRef Name="MaXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Xe__MaLoaiXe__7755B73D">
+    <End Role="Loai_Xe" Type="Self.Loai_Xe" Multiplicity="0..1" />
+    <End Role="Xe" Type="Self.Xe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loai_Xe">
+        <PropertyRef Name="MaLoaiXe" />
+      </Principal>
+      <Dependent Role="Xe">
+        <PropertyRef Name="MaLoaiXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BusTicketManagementModelStoreContainer">
+    <EntitySet Name="Chitietdatve" EntityType="Self.Chitietdatve" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Chuyen_Xe" EntityType="Self.Chuyen_Xe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Khach_Hang" EntityType="Self.Khach_Hang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Loai_KhachHang" EntityType="Self.Loai_KhachHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Loai_NV" EntityType="Self.Loai_NV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Loai_Xe" EntityType="Self.Loai_Xe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nhan_Vien" EntityType="Self.Nhan_Vien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tai_Xe" EntityType="Self.Tai_Xe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tuyen_Xe" EntityType="Self.Tuyen_Xe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ve_Xe" EntityType="Self.Ve_Xe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Xe" EntityType="Self.Xe" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Chitietdat__MaKH__03BB8E22" Association="Self.FK__Chitietdat__MaKH__03BB8E22">
+      <End Role="Khach_Hang" EntitySet="Khach_Hang" />
+      <End Role="Chitietdatve" EntitySet="Chitietdatve" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chitietdat__MaVe__04AFB25B" Association="Self.FK__Chitietdat__MaVe__04AFB25B">
+      <End Role="Ve_Xe" EntitySet="Ve_Xe" />
+      <End Role="Chitietdatve" EntitySet="Chitietdatve" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chuyen_Xe__MaNV__7B264821" Association="Self.FK__Chuyen_Xe__MaNV__7B264821">
+      <End Role="Nhan_Vien" EntitySet="Nhan_Vien" />
+      <End Role="Chuyen_Xe" EntitySet="Chuyen_Xe" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chuyen_Xe__MaTai__7C1A6C5A" Association="Self.FK__Chuyen_Xe__MaTai__7C1A6C5A">
+      <End Role="Tai_Xe" EntitySet="Tai_Xe" />
+      <End Role="Chuyen_Xe" EntitySet="Chuyen_Xe" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chuyen_Xe__MaTuy__7A3223E8" Association="Self.FK__Chuyen_Xe__MaTuy__7A3223E8">
+      <End Role="Tuyen_Xe" EntitySet="Tuyen_Xe" />
+      <End Role="Chuyen_Xe" EntitySet="Chuyen_Xe" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Khach_Han__MaLoa__6FB49575" Association="Self.FK__Khach_Han__MaLoa__6FB49575">
+      <End Role="Loai_KhachHang" EntitySet="Loai_KhachHang" />
+      <End Role="Khach_Hang" EntitySet="Khach_Hang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Nhan_Vien__MaLoa__73852659" Association="Self.FK__Nhan_Vien__MaLoa__73852659">
+      <End Role="Loai_NV" EntitySet="Loai_NV" />
+      <End Role="Nhan_Vien" EntitySet="Nhan_Vien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ve_Xe__MaChuyenX__7FEAFD3E" Association="Self.FK__Ve_Xe__MaChuyenX__7FEAFD3E">
+      <End Role="Chuyen_Xe" EntitySet="Chuyen_Xe" />
+      <End Role="Ve_Xe" EntitySet="Ve_Xe" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ve_Xe__MaNV__7EF6D905" Association="Self.FK__Ve_Xe__MaNV__7EF6D905">
+      <End Role="Nhan_Vien" EntitySet="Nhan_Vien" />
+      <End Role="Ve_Xe" EntitySet="Ve_Xe" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ve_Xe__MaXe__00DF2177" Association="Self.FK__Ve_Xe__MaXe__00DF2177">
+      <End Role="Xe" EntitySet="Xe" />
+      <End Role="Ve_Xe" EntitySet="Ve_Xe" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Xe__MaLoaiXe__7755B73D" Association="Self.FK__Xe__MaLoaiXe__7755B73D">
+      <End Role="Loai_Xe" EntitySet="Loai_Xe" />
+      <End Role="Xe" EntitySet="Xe" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
