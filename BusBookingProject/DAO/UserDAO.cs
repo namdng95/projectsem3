@@ -27,6 +27,7 @@ namespace BusBookingProject.DAO
         {
             return db.Users.OrderBy(x => x.Id).ToPagedList(page, pageSize);
         }
+
         public bool CheckUsername(string username)
         {
             return db.Users.Count(x => x.Username == username) > 0;

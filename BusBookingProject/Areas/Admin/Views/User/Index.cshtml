@@ -15,17 +15,14 @@
 <span style="display: inline-block; margin-bottom: 5px;">
     @Html.ActionLink("Add new User", "Create", "User")
     <b style="margin-left: 3rem;">Search by: </b>
-    <select style="margin-right: 3rem;" id="SearchBy">
+    <select style="margin-right: 3rem;" id="SearchBy" name="SearchBy">
         <option value="Id">Id</option>
         <option value="Username">Username</option>
     </select>
-    @Html.TextBox("Search") <input type="submit" id="SearchBtn" value="Search" />
-</span>
+    @Html.TextBox("SearchValue") <input type="submit" id="SearchBtn" value="Search" />
 
-@if (ViewBag.Exception != null)
-{
-    <div class="alert alert-danger">ViewBag.Exception</div>
-}
+
+</span>
 
 <table class="table table-bordered">
     <thead>
@@ -149,36 +146,41 @@
 @section js{
     <script src="~/Areas/Admin/Assets/js/myJs.js"></script>
     <script>
-        $(document).ready(function () {
-            $("#SearchBtn").click(function () {
-                var SearchBy = $("#SearchBy").val();
-                var SearchValue = $("#Search").val();
-                var SetData = $("#DataSearching");
-                SetData.html("");
-                $.ajax({
-                    url: "/Admin/User/SearchingData?SearchBy=" + SearchBy + "&SearchValue=" + SearchValue,
-                    type: "POST",
-                    contentType: "html",
-                    success: function (result) {
-                        if (result == 0) {
-                            SetData.append('<tr style="color: red;"><td colspan="8">No Match Data</td></tr>');
-                        } else {
-                            $.each(result, function (index, value) {
-                                var Data = "<tr>" +
-                                    "<td>" + value.Id + "</td>" +
-                                    "<td>" + value.Username + "</td>" +
-                                    "<td>" + value.Password + "</td>" +
-                                    "<td>" + value.CreatedDate + "</td>" +
-                                    "<td>" + value.Role + "</td>" +
-                                    "<td>" + value.ActiveCode + "</td>" +
-                                    "<td>" + value.Status + "</td>" +
-                                    "</tr>";
-                                SetData.append(Data);
-                            })
+            $(document).ready(function () {
+                $("#SearchBtn").click(function () {
+                    var SearchBy = $("#SearchBy").val();
+                    var SearchValue = $("#SearchValue").val();
+                    var SetData = $("#DataSearching");
+                    SetData.html(""); //Set Data <tbody> = ""
+                    $.ajax({
+                        url: "/Admin/User/SearchingData?SearchBy=" + SearchBy + "&SearchValue=" + SearchValue,
+                        type: "GET",
+                        contentType: "html",
+                        success: function (result) {
+                            if (result == 0) {
+                                SetData.append('<tr style="color: red;"><td colspan="8">No Match Data</td></tr>');
+                            } else {
+                                //Foreach (value : result)
+                                $.each(result, function (index, value) {
+                                    var Data = "<tr>" +
+                                        "<td>" + value.Id + "</td>" +
+                                        "<td>" + value.Username + "</td>" +
+                                        "<td>" + value.Password + "</td>" +
+                                        "<td>" + value.CreatedDate + "</td>" +
+                                        "<td>" + value.Role + "</td>" +
+                                        "<td>" + value.ActiveCode + "</td>" +
+                                        "<td>" + value.Status + "</td>" +
+                                        "<td>" + "<a href= '" + "/Admin/User/Edit/" + value.Id + "'>Edit</a>" + "|" +
+                                        "<a href= '" + "/Admin/User/Details/" + value.Id + "'>Details</a>" + "|" +
+                                        "<a href= '" + "#" + "'" + "onclick='" + "ConfirmDelete(" + value.Id + ")'" + ">Delete</a>" +
+                                        "</td>" + 
+                                        "</tr>";
+                                    SetData.append(Data);
+                                })
+                            }
                         }
-                    }
+                    })
                 })
-            })
-        });
-    </script>
+            });
+        </script>
 }

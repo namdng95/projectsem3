@@ -3,6 +3,7 @@ using BusBookingProject.Common;
 using BusBookingProject.DAO;
 using BusBookingProject.Models;
 using System;
+using PagedList;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,13 +19,11 @@ namespace BusBookingProject.Areas.Admin.Controllers
         {
             var userDAO = new UserDAO();
             var model = userDAO.ListAllPaging(page, pageSize);
-            //List<User> listUser = db.Users.ToList();
-            //ViewBag.ListUser = listUser;
             return View(model);
         }
-        public JsonResult SearchingData(string SearchBy, string SearchValue)
+        public JsonResult SearchingData(string SearchBy, string SearchValue, int page = 1, int pageSize = 3)
         {
-            List<User> listUser = new List<User>();
+            IEnumerable<User> listUser = new List<User>();
             if (SearchBy == "Id")
             {
                 try
@@ -32,22 +31,22 @@ namespace BusBookingProject.Areas.Admin.Controllers
                     if(!String.IsNullOrEmpty(SearchValue))
                     {
                         int Id = Convert.ToInt32(SearchValue);
-                        listUser = db.Users.Where(x => x.Id == Id).ToList();
+                        listUser = db.Users.Where(x => x.Id == Id).OrderBy(x=>x.Id).ToPagedList(page, pageSize);
                     }
                     else
                     {
                         listUser = db.Users.ToList();
                     }                 
                 }
-                catch(FormatException e)
+                catch(FormatException)
                 {
-                    ViewBag.Exception = "Wrong Id!"+e.ToString();
+                    Console.WriteLine("{0} is not a ID", SearchValue);
                 }
                 return Json(listUser, JsonRequestBehavior.AllowGet);
             }
             else
             {
-                listUser = db.Users.Where(x => x.Username.Contains(SearchValue) || SearchValue == null).ToList();
+                listUser = db.Users.Where(x => x.Username.Contains(SearchValue) || SearchValue == null).OrderBy(x=>x.Id).ToPagedList(page, pageSize);
 
                 return Json(listUser, JsonRequestBehavior.AllowGet);
             }
