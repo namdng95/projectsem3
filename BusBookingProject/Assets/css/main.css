@@ -1513,13 +1513,17 @@ to {-webkit-transform: scale(1.3); opacity:1;}
 .main-bg-bn { width:100%; background-position:top center; background-repeat:no-repeat; background-image:url(bn-03.jpg)/*tpa=https://www.easybook.com/images/hero-images/bn-03.jpg*/; background-color:#000; min-height:400px; padding:20px 0 20px 0; background-size:100% auto;}
 .main-bg-ph { width:100%; background-position:top center; background-repeat:no-repeat; background-image:url(ph-01.jpg)/*tpa=https://www.easybook.com/images/hero-images/ph-01.jpg*/; background-color:#000; min-height:400px; padding:20px 0 20px 0; background-size:100% auto;}
 .sub-bg { width:100%; background-position:top center; background-repeat:no-repeat; background-color:#000; min-height:350px; padding:20px 0; background-size:100% auto;}
-.sub-bg-bus {background-image:url(bg-bus.jpg)/*tpa=https://www.easybook.com/images/bg-bus.jpg*/;}
-.sub-bg-train {background-image:url(bg-train.jpg)/*tpa=https://www.easybook.com/images/bg-train.jpg*/;}
-.sub-bg-car {background-image:url(bg-car.jpg)/*tpa=https://www.easybook.com/images/bg-car.jpg*/;}
-.sub-bg-tour {background-image:url(bg-tour.jpg)/*tpa=https://www.easybook.com/images/bg-tour.jpg*/;}
-.sub-bg-ferry {background-image:url(bg-ferry.jpg)/*tpa=https://www.easybook.com/images/bg-ferry.jpg*/; background-position:bottom center;}
-.sub-bg-charter {background-image:url(bg-charter.jpg)/*tpa=https://www.easybook.com/images/bg-charter.jpg*/; background-position:center center;}
-.sub-bg-flight {background-image:url(bg-flight.jpg)/*tpa=https://www.easybook.com/images/bg-flight.jpg*/;}
+.sub-bg-bus {
+    background-image: url('/Assets/images/bg-bus.jpg') /*tpa=https://www.easybook.com/images/bg-bus.jpg*/;
+}
+.sub-bg-train {background-image:url('/Assets/images/bg-train.jpg')/*tpa=https://www.easybook.com/images/bg-train.jpg*/;}
+.sub-bg-car {
+    background-image: url('/Assets/images/bg-car.jpg') /*tpa=https://www.easybook.com/images/bg-car.jpg*/;
+}
+.sub-bg-tour {background-image:url('/Assets/images/bg-tour.jpg')/*tpa=https://www.easybook.com/images/bg-tour.jpg*/;}
+.sub-bg-ferry {background-image:url('/Assets/images/bg-ferry.jpg')/*tpa=https://www.easybook.com/images/bg-ferry.jpg*/; background-position:bottom center;}
+.sub-bg-charter {background-image:url('/Assets/images/bg-charter.jpg')/*tpa=https://www.easybook.com/images/bg-charter.jpg*/; background-position:center center;}
+.sub-bg-flight {background-image:url('/Assets/images/bg-flight.jpg')/*tpa=https://www.easybook.com/images/bg-flight.jpg*/;}
 .sub-bg h1 {font-size:26px; font-weight:300; margin-bottom:0px; color:#fff;}
 
 #landing-page-operator-list  {padding:30px 0;}
@@ -1868,12 +1872,12 @@ ul.sub-product-tab li.active a {background-color:#ffb300; border:1px solid #ffb3
 .book-step-wrap {width:1070px; margin:20px auto; padding:0 0px;}
 .book-step-wrap ul {margin:0; padding:0;}
 .book-step-wrap li {float:left; list-style:none; padding-left:100px; min-height:70px;}
-.book-step-wrap ul.bus li.step1 {width:30%; background:url(step1-bus.png)/*tpa=https://www.easybook.com/images/step1-bus.png*/ no-repeat;}
-.book-step-wrap ul.bus li.step2 {width:30%; background:url(step2-bus.png)/*tpa=https://www.easybook.com/images/step2-bus.png*/ no-repeat;}
-.book-step-wrap ul.bus li.step3 {width:37%; background:url(step3-bus.png)/*tpa=https://www.easybook.com/images/step3-bus.png*/ no-repeat;}
-.book-step-wrap ul.train li.step1 {width:30%; background:url(step1-train.png)/*tpa=https://www.easybook.com/images/step1-train.png*/ no-repeat;}
-.book-step-wrap ul.train li.step2 {width:30%; background:url(step2-train.png)/*tpa=https://www.easybook.com/images/step2-train.png*/ no-repeat;}
-.book-step-wrap ul.train li.step3 {width:37%; background:url(step3-train.png)/*tpa=https://www.easybook.com/images/step3-train.png*/ no-repeat;}
+.book-step-wrap ul.bus li.step1 {width:30%; background:url('/Assets/images/step1-bus.png')/*tpa=https://www.easybook.com/images/step1-bus.png*/ no-repeat;}
+.book-step-wrap ul.bus li.step2 {width:30%; background:url('/Assets/images/step2-bus.png')/*tpa=https://www.easybook.com/images/step2-bus.png*/ no-repeat;}
+.book-step-wrap ul.bus li.step3 {width:37%; background:url('/Assets/images/step3')/*tpa=https://www.easybook.com/images/step3-bus.png*/ no-repeat;}
+.book-step-wrap ul.train li.step1 {width:30%; background:url('/Assets/images/step1-train.png')/*tpa=https://www.easybook.com/images/step1-train.png*/ no-repeat;}
+.book-step-wrap ul.train li.step2 {width:30%; background:url('/Assets/images/step2-train.png')/*tpa=https://www.easybook.com/images/step2-train.png*/ no-repeat;}
+.book-step-wrap ul.train li.step3 {width:37%; background:url('/Assets/images/step3-train.png')/*tpa=https://www.easybook.com/images/step3-train.png*/ no-repeat;}
 .book-step-wrap ul.car li.step1 {width:30%; background:url(step1-car.png)/*tpa=https://www.easybook.com/images/step1-car.png*/ no-repeat;}
 .book-step-wrap ul.car li.step2 {width:30%; background:url(step2-car.png)/*tpa=https://www.easybook.com/images/step2-car.png*/ no-repeat;}
 .book-step-wrap ul.car li.step3 {width:37%; background:url(step3-car.png)/*tpa=https://www.easybook.com/images/step3-car.png*/ no-repeat;}
