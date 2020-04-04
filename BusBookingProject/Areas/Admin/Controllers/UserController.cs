@@ -1,5 +1,4 @@
-﻿using BusBookingProject.Areas.Admin.Models;
-using BusBookingProject.Common;
+﻿using BusBookingProject.Common;
 using BusBookingProject.DAO;
 using BusBookingProject.Models;
 using System;

@@ -30,15 +30,15 @@ namespace BusBookingProject.Areas.Admin.Controllers
             {
 
                 var userDAO = new UserDAO();
-                var result = userDAO.Login(model.Username, model.Password);
+                var result = userDAO.LoginAdmin(model.Username, model.Password);
                 if (result)
                 {
                     var user = userDAO.GetUserByName(model.Username);
-                    var userSession = new UserLogin();
-                    userSession.UserName = user.Username;
-                    userSession.UserID = user.Id;
+                    var adminSession = new UserLogin();
+                    adminSession.UserName = user.Username;
+                    adminSession.UserID = user.Id;
 
-                    Session.Add(CommonConstants.USER_SESSION, userSession); //Add Session =>([key],[value])
+                    Session.Add(CommonConstants.ADMIN_SESSION, adminSession); //Add Session =>([key],[value])
 
 
                     //Add Coockie User

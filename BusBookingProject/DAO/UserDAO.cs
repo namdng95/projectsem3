@@ -44,7 +44,20 @@ namespace BusBookingProject.DAO
         public bool Login(string username, string password)
         {
             string md5Password = MD5Hash.GetMd5Hash(password);
-            var result = db.Users.Count(x => x.Username == username && x.Password == md5Password);
+            var result = db.Users.Count(x => x.Username == username && x.Password == md5Password && x.Role != "ADMIN");
+            if (result > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool LoginAdmin(string username, string password)
+        {
+            string md5Password = MD5Hash.GetMd5Hash(password);
+            var result = db.Users.Count(x => x.Username == username && x.Password == md5Password && x.Role == "ADMIN");
             if (result > 0)
             {
                 return true;
